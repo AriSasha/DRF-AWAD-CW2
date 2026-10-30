@@ -21,7 +21,7 @@
         <div class="w-full max-w-md">
             <!-- Start: Brand -->
             <div class="flex justify-center mb-8">
-                <a href="index.html" class="inline-flex flex-col items-center gap-3">
+                <a href="{{ url('/') }}" class="inline-flex flex-col items-center gap-3">
                     <img src="{{ asset('assets/img/logo.png') }}" alt="Campus Service Portal" class="h-16 w-16">
                     <span class="text-sm font-semibold text-slate-900">Campus Service Portal</span>
                 </a>
@@ -36,7 +36,7 @@
                 </div>
 
                 <!-- Start: Sign in form -->
-                <form action="dashboard.html" method="get" class="space-y-5">
+                <form action="{{ url('/dashboard') }}" method="get" class="space-y-5">
                     <div>
                         <label for="email" class="block text-sm font-medium text-slate-600 mb-2">Campus email</label>
                         <div class="relative">
@@ -62,7 +62,7 @@
                             <input type="checkbox" name="remember" class="h-4 w-4 rounded border-slate-300 text-[#2563eb] focus:ring-[#2563eb]">
                             <span class="text-sm text-slate-500">Keep me signed in</span>
                         </label>
-                        <a href="forgot-password.html" class="text-sm font-medium text-[#2563eb] hover:text-[#1d4ed8]">Forgot password?</a>
+                        <a href="{{ url('/forgot-password') }}" class="text-sm font-medium text-[#2563eb] hover:text-[#1d4ed8]">Forgot password?</a>
                     </div>
                     <button type="submit" class="w-full py-3 px-4 rounded-xl text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8]">Sign in</button>
                 </form>
@@ -72,16 +72,16 @@
                 <div class="mt-6 pt-6 border-t border-slate-200">
                     <p class="text-xs text-slate-500 mb-3 text-center">Try a demo account</p>
                     <div class="grid grid-cols-3 gap-2">
-                        <a href="dashboard.html" class="text-center text-xs px-2 py-2 rounded-lg border border-slate-200 bg-white hover:border-[#2563eb]">Student</a>
-                        <a href="staff/dashboard.html" class="text-center text-xs px-2 py-2 rounded-lg border border-slate-200 bg-white hover:border-[#d97706]">Staff</a>
-                        <a href="admin/dashboard.html" class="text-center text-xs px-2 py-2 rounded-lg border border-slate-200 bg-white hover:border-[#2563eb]">Admin</a>
+                        <a href="{{ url('/dashboard') }}" class="text-center text-xs px-2 py-2 rounded-lg border border-slate-200 bg-white hover:border-[#2563eb]">Student</a>
+                        <a href="{{ url('/dashboard') }}" class="text-center text-xs px-2 py-2 rounded-lg border border-slate-200 bg-white hover:border-[#d97706]">Staff</a>
+                        <a href="{{ url('/dashboard') }}" class="text-center text-xs px-2 py-2 rounded-lg border border-slate-200 bg-white hover:border-[#2563eb]">Admin</a>
                     </div>
                 </div>
                 <!-- End: Demo accounts -->
 
                 <p class="mt-6 text-center text-sm text-slate-500">
                     New here?
-                    <a href="register.html" class="text-[#2563eb] hover:text-[#1d4ed8]">Create an account</a>
+                    <a href="{{ url('/register') }}" class="text-[#2563eb] hover:text-[#1d4ed8]">Create an account</a>
                 </p>
             </div>
             <!-- End: Sign in card -->

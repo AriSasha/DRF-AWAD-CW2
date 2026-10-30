@@ -21,7 +21,7 @@
         <div class="w-full max-w-md">
             <!-- Start: Brand -->
             <div class="flex justify-center mb-8">
-                <a href="index.html"><img src="{{ asset('assets/img/logo.png') }}" alt="Campus Service Portal" class="h-16 w-16"></a>
+                <a href="{{ url('/') }}"><img src="{{ asset('assets/img/logo.png') }}" alt="Campus Service Portal" class="h-16 w-16"></a>
             </div>
             <!-- End: Brand -->
 
@@ -30,7 +30,7 @@
                 <h1 class="text-xl font-bold mb-2">Forgot your password?</h1>
                 <p class="text-sm text-slate-500 mb-6">Enter the campus email on your account. We will send a link so you can choose a new password.</p>
                 <!-- Start: Email form -->
-                <form action="reset-password.html" method="get" class="space-y-5">
+                <form action="{{ url('/reset-password') }}" method="get" class="space-y-5">
                     <div>
                         <label for="email" class="block text-sm font-medium text-slate-600 mb-2">Campus email</label>
                         <input type="email" id="email" name="email" required placeholder="you@campus.ac.ug" class="input-field">
@@ -38,7 +38,7 @@
                     <button type="submit" class="w-full py-3 px-4 rounded-xl text-sm font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8]">Send reset link</button>
                 </form>
                 <!-- End: Email form -->
-                <p class="mt-6 text-center text-sm text-slate-500"><a href="login.html" class="text-[#2563eb] hover:text-[#1d4ed8]">Back to sign in</a></p>
+                <p class="mt-6 text-center text-sm text-slate-500"><a href="{{ url('/login') }}" class="text-[#2563eb] hover:text-[#1d4ed8]">Back to sign in</a></p>
             </div>
             <!-- End: Reset request card -->
         </div>

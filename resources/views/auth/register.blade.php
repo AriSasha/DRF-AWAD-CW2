@@ -21,7 +21,7 @@
         <div class="w-full max-w-md">
             <!-- Start: Brand -->
             <div class="flex justify-center mb-8">
-                <a href="index.html"><img src="{{ asset('assets/img/logo.png') }}" alt="Campus Service Portal" class="h-16 w-16"></a>
+                <a href="{{ url('/') }}"><img src="{{ asset('assets/img/logo.png') }}" alt="Campus Service Portal" class="h-16 w-16"></a>
             </div>
             <!-- End: Brand -->
 
@@ -34,7 +34,7 @@
                 </div>
 
                 <!-- Start: Register form -->
-                <form action="dashboard.html" method="get" class="space-y-4">
+                <form action="{{ url('/dashboard') }}" method="get" class="space-y-4">
                     <div>
                         <label for="name" class="block text-sm font-medium text-slate-600 mb-2">Full name <span class="text-[#d97706]">*</span></label>
                         <input type="text" id="name" name="name" required minlength="2" autofocus placeholder="Aisha Namuli" class="input-field">
@@ -64,7 +64,7 @@
 
                 <p class="mt-6 text-center text-sm text-slate-500">
                     Already have an account?
-                    <a href="login.html" class="text-[#2563eb] hover:text-[#1d4ed8]">Sign in</a>
+                    <a href="{{ url('/login') }}" class="text-[#2563eb] hover:text-[#1d4ed8]">Sign in</a>
                 </p>
             </div>
             <!-- End: Register card -->
