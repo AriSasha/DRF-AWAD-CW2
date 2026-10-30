@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in — Campus Service Portal</title>
+    <title>Sign in — Student Management System</title>
     <link rel="icon" type="image/png" href="{{ asset('assets/img/logo.png') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,8 +22,8 @@
             <!-- Start: Brand -->
             <div class="flex justify-center mb-8">
                 <a href="{{ url('/') }}" class="inline-flex flex-col items-center gap-3">
-                    <img src="{{ asset('assets/img/logo.png') }}" alt="Campus Service Portal" class="h-16 w-16">
-                    <span class="text-sm font-semibold text-slate-900">Campus Service Portal</span>
+                    <img src="{{ asset('assets/img/logo.png') }}" alt="Student Management System" class="h-16 w-16">
+                    <span class="text-sm font-semibold text-slate-900">Student Management System</span>
                 </a>
             </div>
             <!-- End: Brand -->
@@ -43,7 +43,7 @@
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
                                 <i data-lucide="mail" class="h-5 w-5"></i>
                             </div>
-                            <input type="email" id="email" name="email" required autofocus placeholder="you@campus.ac.ug"
+                            <input type="email" id="email" name="email" required autofocus placeholder="you@mubs.ac.ug"
                                 class="block w-full pl-10 pr-3 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]">
                         </div>
                     </div>
@@ -93,7 +93,7 @@
     <footer class="bg-[#1e3a8a]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex flex-col md:flex-row justify-between items-center gap-3">
-                <p class="text-sm text-blue-100">© 2026 <span class="font-semibold text-white">Campus Service Portal</span>. All rights reserved.</p>
+                <p class="text-sm text-blue-100">© 2026 <span class="font-semibold text-white">Student Management System</span>. All rights reserved.</p>
                 <p class="text-sm text-blue-200">Estates · ICT · Halls · Hostels · Registry</p>
             </div>
         </div>
