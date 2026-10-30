@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Service Portal | Campus helpdesk</title>
+    <title>Student Management System | MUBS</title>
     <meta name="description" content="Report a broken light, book a lecture hall, or get ICT help. Sign in with your campus email and follow your ticket until it is done.">
     <link rel="icon" type="image/png" href="{{ asset('assets/img/logo.png') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,21 +31,21 @@
     <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <a href="index.html" class="flex items-center gap-3">
-                    <img src="{{ asset('assets/img/logo.png') }}" alt="Campus Service Portal" class="h-11 w-11">
+                <a href="{{ url('/') }}" class="flex items-center gap-3">
+                    <img src="{{ asset('assets/img/logo.png') }}" alt="Student Management System" class="h-11 w-11">
                     <div class="hidden sm:block">
-                        <p class="text-sm font-semibold text-slate-900 leading-tight">Campus Service Portal</p>
+                        <p class="text-sm font-semibold text-slate-900 leading-tight">Student Management System</p>
                         <p class="text-[11px] text-slate-500">Helpdesk for students and staff</p>
                     </div>
                 </a>
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="index.html" class="text-slate-900 text-sm font-medium">Home</a>
+                    <a href="{{ url('/') }}" class="text-slate-900 text-sm font-medium">Home</a>
                     <a href="#how-it-works" class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium">How it works</a>
                     <a href="#services" class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium">Services</a>
                     <a href="#who" class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium">Who can use it</a>
-                    <a href="contact.html" class="text-slate-500 hover:text-slate-900 transition-colors text-sm font-medium">Contact us</a>
-                    <a href="login.html" class="px-5 py-2.5 border border-slate-200 text-slate-900 rounded-lg font-medium text-sm hover:bg-white hover:border-[#2563eb]/40">Sign in</a>
-                    <a href="register.html" class="px-5 py-2.5 bg-[#2563eb] text-white rounded-lg font-medium text-sm hover:bg-[#1d4ed8] glow-blue">Create account</a>
+                    
+                    <a href="{{ url('/login') }}" class="px-5 py-2.5 border border-slate-200 text-slate-900 rounded-lg font-medium text-sm hover:bg-white hover:border-[#2563eb]/40">Sign in</a>
+                    <a href="{{ url('/register') }}" class="px-5 py-2.5 bg-[#2563eb] text-white rounded-lg font-medium text-sm hover:bg-[#1d4ed8] glow-blue">Create account</a>
                 </div>
                 <label for="mobile-nav-toggle" class="md:hidden p-2 text-slate-900 cursor-pointer">
                     <i data-lucide="menu" class="w-6 h-6"></i>
@@ -54,13 +54,13 @@
             <input type="checkbox" id="mobile-nav-toggle" class="peer hidden">
             <div class="hidden peer-checked:block md:!hidden py-4 border-t border-slate-200">
                 <div class="flex flex-col gap-4">
-                    <a href="index.html" class="text-slate-900 text-sm font-medium">Home</a>
+                    <a href="{{ url('/') }}" class="text-slate-900 text-sm font-medium">Home</a>
                     <a href="#how-it-works" class="text-slate-500 hover:text-slate-900 text-sm font-medium">How it works</a>
                     <a href="#services" class="text-slate-500 hover:text-slate-900 text-sm font-medium">Services</a>
                     <a href="#who" class="text-slate-500 hover:text-slate-900 text-sm font-medium">Who can use it</a>
-                    <a href="contact.html" class="text-slate-500 hover:text-slate-900 text-sm font-medium">Contact us</a>
-                    <a href="login.html" class="px-5 py-2.5 border border-slate-200 text-slate-900 rounded-lg font-medium text-sm text-center">Sign in</a>
-                    <a href="register.html" class="px-5 py-2.5 bg-[#2563eb] text-white rounded-lg font-medium text-sm text-center">Create account</a>
+                    
+                    <a href="{{ url('/login') }}" class="px-5 py-2.5 border border-slate-200 text-slate-900 rounded-lg font-medium text-sm text-center">Sign in</a>
+                    <a href="{{ url('/register') }}" class="px-5 py-2.5 bg-[#2563eb] text-white rounded-lg font-medium text-sm text-center">Create account</a>
                 </div>
             </div>
         </div>
@@ -98,11 +98,11 @@
                         </div>
                     </div>
                     <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                        <a href="register.html" class="group flex items-center gap-2 px-8 py-4 bg-[#2563eb] text-white rounded-xl font-semibold text-sm hover:bg-[#1d4ed8] glow-blue w-full sm:w-auto justify-center">
+                        <a href="{{ url('/register') }}" class="group flex items-center gap-2 px-8 py-4 bg-[#2563eb] text-white rounded-xl font-semibold text-sm hover:bg-[#1d4ed8] glow-blue w-full sm:w-auto justify-center">
                             Open a ticket
                             <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
                         </a>
-                        <a href="login.html" class="flex items-center justify-center gap-2 px-8 py-4 border border-slate-200 bg-white rounded-xl font-semibold text-sm text-slate-900 hover:border-[#2563eb]/40 w-full sm:w-auto">
+                        <a href="{{ url('/login') }}" class="flex items-center justify-center gap-2 px-8 py-4 border border-slate-200 bg-white rounded-xl font-semibold text-sm text-slate-900 hover:border-[#2563eb]/40 w-full sm:w-auto">
                             I already have an account
                         </a>
                     </div>
@@ -282,7 +282,7 @@
                         <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-[#2563eb] mt-0.5"></i>Leave a comment or a photo</li>
                         <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-[#2563eb] mt-0.5"></i>Say if the fix did not work</li>
                     </ul>
-                    <a href="dashboard.html" class="inline-flex items-center gap-2 mt-6 text-sm text-[#2563eb]">Open student home <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                    <a href="{{ url('/dashboard') }}" class="inline-flex items-center gap-2 mt-6 text-sm text-[#2563eb]">Open student home <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                 </div>
                 <div class="p-6 rounded-xl bg-white border border-slate-200">
                     <div class="flex items-center gap-3 mb-4">
@@ -295,7 +295,7 @@
                         <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-[#d97706] mt-0.5"></i>Take a ticket or pass it to a colleague</li>
                         <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-[#d97706] mt-0.5"></i>Mark it done and leave a short note</li>
                     </ul>
-                    <a href="staff/dashboard.html" class="inline-flex items-center gap-2 mt-6 text-sm text-[#d97706]">Open staff home <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                    <a href="{{ url('/dashboard') }}" class="inline-flex items-center gap-2 mt-6 text-sm text-[#d97706]">Open staff home <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                 </div>
                 <div class="p-6 rounded-xl bg-white border border-slate-200">
                     <div class="flex items-center gap-3 mb-4">
@@ -308,7 +308,7 @@
                         <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-[#2563eb] mt-0.5"></i>Add a department or a category</li>
                         <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-[#2563eb] mt-0.5"></i>Create a staff login when someone joins</li>
                     </ul>
-                    <a href="admin/dashboard.html" class="inline-flex items-center gap-2 mt-6 text-sm text-[#2563eb]">Open admin home <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                    <a href="{{ url('/dashboard') }}" class="inline-flex items-center gap-2 mt-6 text-sm text-[#2563eb]">Open admin home <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                 </div>
             </div>
         </div>
@@ -322,8 +322,8 @@
                 <h2 class="text-2xl sm:text-3xl font-bold mb-4">Need help today?</h2>
                 <p class="text-slate-500 mb-8 max-w-xl mx-auto">Create an account with your campus email. If you already signed up last semester, just sign in.</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="register.html" class="px-8 py-4 bg-[#2563eb] text-white rounded-xl font-semibold text-sm hover:bg-[#1d4ed8] glow-blue">Create account</a>
-                    <a href="login.html" class="px-8 py-4 border border-slate-200 bg-white rounded-xl font-semibold text-sm hover:border-[#2563eb]/40">Sign in</a>
+                    <a href="{{ url('/register') }}" class="px-8 py-4 bg-[#2563eb] text-white rounded-xl font-semibold text-sm hover:bg-[#1d4ed8] glow-blue">Create account</a>
+                    <a href="{{ url('/login') }}" class="px-8 py-4 border border-slate-200 bg-white rounded-xl font-semibold text-sm hover:border-[#2563eb]/40">Sign in</a>
                 </div>
             </div>
         </div>
@@ -337,18 +337,18 @@
                 <div>
                     <div class="flex items-center gap-3 mb-6">
                         <img src="{{ asset('assets/img/logo.png') }}" alt="" class="h-12 w-12">
-                        <span class="font-semibold">Campus Service Portal</span>
+                        <span class="font-semibold">Student Management System</span>
                     </div>
-                    <p class="text-blue-100 text-sm leading-relaxed max-w-sm">The campus helpdesk for repairs, room bookings, and ICT support. Sign in with your campus email.</p>
+                    <p class="text-blue-100 text-sm leading-relaxed max-w-sm">The MUBS for repairs, room bookings, and ICT support. Sign in with your campus email.</p>
                 </div>
                 <div>
                     <h4 class="font-bold text-lg mb-6">Quick links</h4>
                     <ul class="space-y-3 text-sm text-blue-100">
-                        <li><a href="login.html" class="hover:text-white">Sign in</a></li>
-                        <li><a href="register.html" class="hover:text-white">Create account</a></li>
-                        <li><a href="requests/create.html" class="hover:text-white">Open a ticket</a></li>
-                        <li><a href="staff/dashboard.html" class="hover:text-white">Staff inbox</a></li>
-                        <li><a href="contact.html" class="hover:text-white">Contact us</a></li>
+                        <li><a href="{{ url('/login') }}" class="hover:text-white">Sign in</a></li>
+                        <li><a href="{{ url('/register') }}" class="hover:text-white">Create account</a></li>
+                        <li><a href="{{ url('/registrations/create') }}" class="hover:text-white">Open a ticket</a></li>
+                        <li><a href="{{ url('/dashboard') }}" class="hover:text-white">Staff inbox</a></li>
+                        
                     </ul>
                 </div>
                 <div>
@@ -363,7 +363,7 @@
                 <div>
                     <h4 class="font-bold text-lg mb-6">Contact</h4>
                     <ul class="space-y-2 text-sm text-blue-100">
-                        <li><a href="contact.html" class="hover:text-white">helpdesk@campus.ac.ug</a></li>
+                        
                         <li>Estates: 0414 000 210</li>
                         <li>ICT: 0414 000 211</li>
                         <li class="text-[#fbbf24] pt-2">Mon–Fri, 8:00am – 5:00pm</li>
@@ -371,7 +371,7 @@
                 </div>
             </div>
             <div class="pt-8 border-t border-blue-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-blue-200">
-                <p>© 2026 Campus Service Portal. All rights reserved.</p>
+                <p>© 2026 Student Management System. All rights reserved.</p>
                 <p>Privacy · Acceptable use · Helpdesk policy</p>
             </div>
         </div>

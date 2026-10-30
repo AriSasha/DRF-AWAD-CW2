@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create account — Campus Service Portal</title>
+    <title>Create account — Student Management System</title>
     <link rel="icon" type="image/png" href="{{ asset('assets/img/logo.png') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
         <div class="w-full max-w-md">
             <!-- Start: Brand -->
             <div class="flex justify-center mb-8">
-                <a href="index.html"><img src="{{ asset('assets/img/logo.png') }}" alt="Campus Service Portal" class="h-16 w-16"></a>
+                <a href="{{ url('/') }}"><img src="{{ asset('assets/img/logo.png') }}" alt="Student Management System" class="h-16 w-16"></a>
             </div>
             <!-- End: Brand -->
 
@@ -34,14 +34,14 @@
                 </div>
 
                 <!-- Start: Register form -->
-                <form action="dashboard.html" method="get" class="space-y-4">
+                <form action="{{ url('/dashboard') }}" method="get" class="space-y-4">
                     <div>
                         <label for="name" class="block text-sm font-medium text-slate-600 mb-2">Full name <span class="text-[#d97706]">*</span></label>
                         <input type="text" id="name" name="name" required minlength="2" autofocus placeholder="Aisha Namuli" class="input-field">
                     </div>
                     <div>
                         <label for="email" class="block text-sm font-medium text-slate-600 mb-2">Campus email <span class="text-[#d97706]">*</span></label>
-                        <input type="email" id="email" name="email" required placeholder="aisha.namuli@campus.ac.ug" class="input-field">
+                        <input type="email" id="email" name="email" required placeholder="aisha.namuli@mubs.ac.ug" class="input-field">
                     </div>
                     <div>
                         <label for="role" class="block text-sm font-medium text-slate-600 mb-2">I am a <span class="text-[#d97706]">*</span></label>
@@ -64,7 +64,7 @@
 
                 <p class="mt-6 text-center text-sm text-slate-500">
                     Already have an account?
-                    <a href="login.html" class="text-[#2563eb] hover:text-[#1d4ed8]">Sign in</a>
+                    <a href="{{ url('/login') }}" class="text-[#2563eb] hover:text-[#1d4ed8]">Sign in</a>
                 </p>
             </div>
             <!-- End: Register card -->
@@ -76,7 +76,7 @@
     <footer class="bg-[#1e3a8a]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex flex-col md:flex-row justify-between items-center gap-3">
-                <p class="text-sm text-blue-100">© 2026 <span class="font-semibold text-white">Campus Service Portal</span>. All rights reserved.</p>
+                <p class="text-sm text-blue-100">© 2026 <span class="font-semibold text-white">Student Management System</span>. All rights reserved.</p>
                 <p class="text-sm text-blue-200">Estates · ICT · Halls · Hostels · Registry</p>
             </div>
         </div>
