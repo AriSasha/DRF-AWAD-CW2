@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Departments — Campus Service Portal</title>
+    <title>Courses — Student Management System</title>
     <link rel="icon" type="image/png" href="{{ asset('assets/img/logo.png') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,11 +30,11 @@
                         <span class="sr-only">Open sidebar</span>
                         <i data-lucide="menu" class="w-6 h-6"></i>
                     </label>
-                    <a href="../../admin/dashboard.html" class="flex items-center ms-2 md:me-8">
-                        <img src="{{ asset('assets/img/logo.png') }}" alt="Campus Service Portal" class="h-10 w-10 me-3">
+                    <a href="{{ url('/dashboard') }}" class="flex items-center ms-2 md:me-8">
+                        <img src="{{ asset('assets/img/logo.png') }}" alt="Student Management System" class="h-10 w-10 me-3">
                         <div class="flex flex-col">
-                            <span class="font-semibold text-slate-900 text-base">Campus Service Portal</span>
-                            <span class="text-xs text-slate-500">Campus helpdesk</span>
+                            <span class="font-semibold text-slate-900 text-base">Student Management System</span>
+                            <span class="text-xs text-slate-500">MUBS</span>
                         </div>
                     </a>
                 </div>
@@ -48,13 +48,13 @@
                         <div class="absolute right-0 mt-2 w-80 bg-white border border-slate-200 rounded-lg shadow-lg z-50">
                             <div class="px-4 py-2 border-b border-slate-200 flex justify-between items-center bg-slate-50">
                                 <p class="text-sm font-medium">Notifications</p>
-                                <a href="../../notifications.html" class="text-xs text-[#2563eb]">View all</a>
+                                
                             </div>
-                            <a href="../../requests/show.html" class="block px-4 py-3 hover:bg-slate-50 border-b border-slate-200">
+                            <a href="{{ url('/registrations/1') }}" class="block px-4 py-3 hover:bg-slate-50 border-b border-slate-200">
                                 <p class="text-sm">Status updated to <span class="text-[#d97706]">In progress</span></p>
                                 <p class="text-xs text-slate-500 mt-1">Broken projector — Lecture Hall B2 · 12 min ago</p>
                             </a>
-                            <a href="../../requests/show.html" class="block px-4 py-3 hover:bg-slate-50">
+                            <a href="{{ url('/registrations/1') }}" class="block px-4 py-3 hover:bg-slate-50">
                                 <p class="text-sm">New comment from Estates</p>
                                 <p class="text-xs text-slate-500 mt-1">Technician scheduled for Monday · 1 hr ago</p>
                             </a>
@@ -74,11 +74,11 @@
                         <div class="absolute right-0 mt-2 w-56 bg-white border border-slate-200 rounded-lg shadow-lg z-50">
                             <div class="px-4 py-3 border-b border-slate-200 bg-slate-50">
                                 <p class="text-sm font-medium">Joy Tiko</p>
-                                <p class="text-xs text-slate-500 truncate">joy.tiko@campus.ac.ug</p>
+                                <p class="text-xs text-slate-500 truncate">joy.tiko@mubs.ac.ug</p>
                             </div>
-                            <a href="../../profile.html" class="flex items-center px-4 py-2 text-sm text-slate-600 hover:bg-slate-50"><i data-lucide="user" class="w-4 h-4 mr-2"></i>My Profile</a>
-                            <a href="../../profile.html" class="flex items-center px-4 py-2 text-sm text-slate-600 hover:bg-slate-50"><i data-lucide="settings" class="w-4 h-4 mr-2"></i>Account Settings</a>
-                            <a href="../../login.html" class="flex items-center px-4 py-2 text-sm text-[#d97706] hover:bg-slate-50 border-t border-slate-200"><i data-lucide="log-out" class="w-4 h-4 mr-2"></i>Sign out</a>
+                            <a href="{{ url('/profile') }}" class="flex items-center px-4 py-2 text-sm text-slate-600 hover:bg-slate-50"><i data-lucide="user" class="w-4 h-4 mr-2"></i>My Profile</a>
+                            <a href="{{ url('/profile') }}" class="flex items-center px-4 py-2 text-sm text-slate-600 hover:bg-slate-50"><i data-lucide="settings" class="w-4 h-4 mr-2"></i>Account Settings</a>
+                            <a href="{{ url('/login') }}" class="flex items-center px-4 py-2 text-sm text-[#d97706] hover:bg-slate-50 border-t border-slate-200"><i data-lucide="log-out" class="w-4 h-4 mr-2"></i>Sign out</a>
                         </div>
                     </details>
                     <!-- End: Header user menu -->
@@ -91,7 +91,7 @@
     <!-- Start: Sidebar -->
     <aside class="fixed top-0 left-0 z-40 w-64 h-screen pt-16 -translate-x-full peer-checked:translate-x-0 sm:translate-x-0 bg-white border-r border-slate-200 flex flex-col">
         <div class="flex-1 px-3 py-4 overflow-y-auto sidebar-scrollbar">
-            <div class="space-y-1 mb-5"><p class="px-3 text-xs font-semibold text-slate-400 uppercase mb-2">Main</p><a href="../../admin/dashboard.html" class="sidebar-item border-l-3 border-transparent text-slate-500 flex items-center p-2 rounded-lg hover:bg-slate-50 hover:text-slate-900 group text-sm transition-all duration-200 pl-3"><i data-lucide="layout-dashboard" class="w-5 h-5 text-slate-400 group-hover:text-[#2563eb] transition-colors"></i><span class="ms-3 text-sm font-medium">Dashboard</span></a><a href="../../requests/index.html" class="sidebar-item border-l-3 border-transparent text-slate-500 flex items-center p-2 rounded-lg hover:bg-slate-50 hover:text-slate-900 group text-sm transition-all duration-200 pl-3"><i data-lucide="clipboard-list" class="w-5 h-5 text-slate-400 group-hover:text-[#2563eb] transition-colors"></i><span class="ms-3 text-sm font-medium">All tickets</span></a><a href="../../notifications.html" class="sidebar-item border-l-3 border-transparent text-slate-500 flex items-center p-2 rounded-lg hover:bg-slate-50 hover:text-slate-900 group text-sm transition-all duration-200 pl-3"><i data-lucide="bell" class="w-5 h-5 text-slate-400 group-hover:text-[#2563eb] transition-colors"></i><span class="ms-3 text-sm font-medium">Notifications</span></a></div><div class="space-y-1 mb-5"><p class="px-3 text-xs font-semibold text-slate-400 uppercase mb-2">Administration</p><a href="../../admin/departments/index.html" class="sidebar-item active border-l-3 border-[#2563eb] bg-blue-50 text-[#2563eb] flex items-center p-2 rounded-lg hover:bg-slate-50 hover:text-slate-900 group text-sm transition-all duration-200 pl-3"><i data-lucide="building-2" class="w-5 h-5 text-[#2563eb] group-hover:text-[#2563eb] transition-colors"></i><span class="ms-3 text-sm font-medium">Departments</span></a><a href="../../admin/categories/index.html" class="sidebar-item border-l-3 border-transparent text-slate-500 flex items-center p-2 rounded-lg hover:bg-slate-50 hover:text-slate-900 group text-sm transition-all duration-200 pl-3"><i data-lucide="tags" class="w-5 h-5 text-slate-400 group-hover:text-[#2563eb] transition-colors"></i><span class="ms-3 text-sm font-medium">Categories</span></a><a href="../../admin/users/index.html" class="sidebar-item border-l-3 border-transparent text-slate-500 flex items-center p-2 rounded-lg hover:bg-slate-50 hover:text-slate-900 group text-sm transition-all duration-200 pl-3"><i data-lucide="users" class="w-5 h-5 text-slate-400 group-hover:text-[#2563eb] transition-colors"></i><span class="ms-3 text-sm font-medium">People</span></a></div><div class="space-y-1 mb-5"><p class="px-3 text-xs font-semibold text-slate-400 uppercase mb-2">Account</p><a href="../../profile.html" class="sidebar-item border-l-3 border-transparent text-slate-500 flex items-center p-2 rounded-lg hover:bg-slate-50 hover:text-slate-900 group text-sm transition-all duration-200 pl-3"><i data-lucide="user-cog" class="w-5 h-5 text-slate-400 group-hover:text-[#2563eb] transition-colors"></i><span class="ms-3 text-sm font-medium">My Account</span></a></div>
+            <div class="space-y-1 mb-5"><p class="px-3 text-xs font-semibold text-slate-400 uppercase mb-2">Main</p><a href="{{ url('/dashboard') }}" class="sidebar-item border-l-3 border-transparent text-slate-500 flex items-center p-2 rounded-lg hover:bg-slate-50 hover:text-slate-900 group text-sm transition-all duration-200 pl-3"><i data-lucide="layout-dashboard" class="w-5 h-5 text-slate-400 group-hover:text-[#2563eb] transition-colors"></i><span class="ms-3 text-sm font-medium">Dashboard</span></a><a href="{{ url('/registrations') }}" class="sidebar-item border-l-3 border-transparent text-slate-500 flex items-center p-2 rounded-lg hover:bg-slate-50 hover:text-slate-900 group text-sm transition-all duration-200 pl-3"><i data-lucide="clipboard-list" class="w-5 h-5 text-slate-400 group-hover:text-[#2563eb] transition-colors"></i><span class="ms-3 text-sm font-medium">All registrations</span></a></div><div class="space-y-1 mb-5"><p class="px-3 text-xs font-semibold text-slate-400 uppercase mb-2">Administration</p><a href="{{ url('/courses') }}" class="sidebar-item active border-l-3 border-[#2563eb] bg-blue-50 text-[#2563eb] flex items-center p-2 rounded-lg hover:bg-slate-50 hover:text-slate-900 group text-sm transition-all duration-200 pl-3"><i data-lucide="building-2" class="w-5 h-5 text-[#2563eb] group-hover:text-[#2563eb] transition-colors"></i><span class="ms-3 text-sm font-medium">Departments</span></a><a href="{{ url('/students') }}" class="sidebar-item border-l-3 border-transparent text-slate-500 flex items-center p-2 rounded-lg hover:bg-slate-50 hover:text-slate-900 group text-sm transition-all duration-200 pl-3"><i data-lucide="tags" class="w-5 h-5 text-slate-400 group-hover:text-[#2563eb] transition-colors"></i><span class="ms-3 text-sm font-medium">Categories</span></a><a href="{{ url('/users') }}" class="sidebar-item border-l-3 border-transparent text-slate-500 flex items-center p-2 rounded-lg hover:bg-slate-50 hover:text-slate-900 group text-sm transition-all duration-200 pl-3"><i data-lucide="users" class="w-5 h-5 text-slate-400 group-hover:text-[#2563eb] transition-colors"></i><span class="ms-3 text-sm font-medium">People</span></a></div><div class="space-y-1 mb-5"><p class="px-3 text-xs font-semibold text-slate-400 uppercase mb-2">Account</p><a href="{{ url('/profile') }}" class="sidebar-item border-l-3 border-transparent text-slate-500 flex items-center p-2 rounded-lg hover:bg-slate-50 hover:text-slate-900 group text-sm transition-all duration-200 pl-3"><i data-lucide="user-cog" class="w-5 h-5 text-slate-400 group-hover:text-[#2563eb] transition-colors"></i><span class="ms-3 text-sm font-medium">My Account</span></a></div>
         </div>
         <!-- Start: Sidebar user card -->
         <div class="mt-auto border-t border-slate-200 p-4">
@@ -102,7 +102,7 @@
                 </div>
                 <div class="flex-1 min-w-0">
                     <p class="text-sm font-medium text-slate-900 truncate">Joy Tiko</p>
-                    <p class="text-xs text-slate-500 truncate">joy.tiko@campus.ac.ug</p>
+                    <p class="text-xs text-slate-500 truncate">joy.tiko@mubs.ac.ug</p>
                 </div>
             </div>
             <div class="flex items-center gap-2 px-3 py-2 bg-white rounded-lg border border-slate-200">
@@ -118,44 +118,44 @@
     <div class="pt-16 sm:pl-64 min-h-screen flex flex-col">
         <main class="flex-1 pb-8 px-4 sm:px-8 lg:px-10 pt-6">
 
-            <!-- Start: Page heading -->
+                     <!-- Start: Page heading -->
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
                 <div>
-                    <h1 class="text-xl font-semibold">Departments</h1>
-                    <p class="text-sm text-slate-500 mt-1">Departments that receive requests. Add one if a new unit starts using the helpdesk.</p>
+                    <h1 class="text-xl font-semibold">Courses</h1>
+                    <p class="text-sm text-slate-500 mt-1">All courses offered. Add a course before students can register for it.</p>
                 </div>
-                <a href="create.html" class="inline-flex items-center px-4 py-2 bg-[#2563eb] rounded-lg text-sm font-medium text-white hover:bg-[#1d4ed8]"><i data-lucide="plus" class="w-4 h-4 mr-2"></i>Add department</a>
+                <a href="{{ url('/courses/create') }}" class="inline-flex items-center px-4 py-2 bg-[#2563eb] rounded-lg text-sm font-medium text-white hover:bg-[#1d4ed8]"><i data-lucide="plus" class="w-4 h-4 mr-2"></i>Add course</a>
             </div>
             <!-- End: Page heading -->
 
-            <!-- Start: Departments table -->
+            <!-- Start: Courses table -->
             <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
                 <table class="w-full">
                     <thead>
                         <tr class="border-b border-slate-200 bg-slate-50">
-                            <th class="py-3 px-4 text-left text-sm font-semibold text-slate-500">Name</th>
-                            <th class="py-3 px-4 text-left text-sm font-semibold text-slate-500">Description</th>
-                            <th class="py-3 px-4 text-left text-sm font-semibold text-slate-500">Categories</th>
+                            <th class="py-3 px-4 text-left text-sm font-semibold text-slate-500">Code</th>
+                            <th class="py-3 px-4 text-left text-sm font-semibold text-slate-500">Course name</th>
+                            <th class="py-3 px-4 text-left text-sm font-semibold text-slate-500">Lecturer</th>
+                            <th class="py-3 px-4 text-left text-sm font-semibold text-slate-500">Students</th>
                             <th class="py-3 px-4 text-center text-sm font-semibold text-slate-500">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="border-b border-slate-200 hover:bg-slate-50"><td class="py-3 px-4 text-sm font-medium">Estates</td><td class="py-3 px-4 text-sm text-slate-500">Leaks, lights, and furniture</td><td class="py-3 px-4 text-sm">4</td><td class="py-3 px-4 text-center"><a href="edit.html" class="text-[#2563eb]"><i data-lucide="edit" class="w-4 h-4 inline"></i></a></td></tr>
-                        <tr class="border-b border-slate-200 hover:bg-slate-50"><td class="py-3 px-4 text-sm font-medium">ICT Support</td><td class="py-3 px-4 text-sm text-slate-500">Network, AV, accounts, hardware</td><td class="py-3 px-4 text-sm">4</td><td class="py-3 px-4 text-center"><a href="edit.html" class="text-[#2563eb]"><i data-lucide="edit" class="w-4 h-4 inline"></i></a></td></tr>
-                        <tr class="border-b border-slate-200 hover:bg-slate-50"><td class="py-3 px-4 text-sm font-medium">Halls</td><td class="py-3 px-4 text-sm text-slate-500">Lecture halls, labs, event spaces</td><td class="py-3 px-4 text-sm">3</td><td class="py-3 px-4 text-center"><a href="edit.html" class="text-[#2563eb]"><i data-lucide="edit" class="w-4 h-4 inline"></i></a></td></tr>
-                        <tr class="border-b border-slate-200 hover:bg-slate-50"><td class="py-3 px-4 text-sm font-medium">Hostels</td><td class="py-3 px-4 text-sm text-slate-500">Residential blocks and sanitation</td><td class="py-3 px-4 text-sm">3</td><td class="py-3 px-4 text-center"><a href="edit.html" class="text-[#2563eb]"><i data-lucide="edit" class="w-4 h-4 inline"></i></a></td></tr>
-                        <tr class="hover:bg-slate-50"><td class="py-3 px-4 text-sm font-medium">Administration</td><td class="py-3 px-4 text-sm text-slate-500">Appointments and document requests</td><td class="py-3 px-4 text-sm">2</td><td class="py-3 px-4 text-center"><a href="edit.html" class="text-[#2563eb]"><i data-lucide="edit" class="w-4 h-4 inline"></i></a></td></tr>
+                        <tr class="border-b border-slate-200 hover:bg-slate-50"><td class="py-3 px-4 text-sm font-medium">BUC3131</td><td class="py-3 px-4 text-sm">Advanced Web Application Development</td><td class="py-3 px-4 text-sm text-slate-500">Daniel Okello</td><td class="py-3 px-4 text-sm">42</td><td class="py-3 px-4 text-center"><a href="{{ url('/courses/1/edit') }}" class="text-[#2563eb]"><i data-lucide="edit" class="w-4 h-4 inline"></i></a></td></tr>
+                        <tr class="border-b border-slate-200 hover:bg-slate-50"><td class="py-3 px-4 text-sm font-medium">BUC3126</td><td class="py-3 px-4 text-sm">Information Security and Auditing</td><td class="py-3 px-4 text-sm text-slate-500">Grace Nakato</td><td class="py-3 px-4 text-sm">38</td><td class="py-3 px-4 text-center"><a href="{{ url('/courses/1/edit') }}" class="text-[#2563eb]"><i data-lucide="edit" class="w-4 h-4 inline"></i></a></td></tr>
+                        <tr class="border-b border-slate-200 hover:bg-slate-50"><td class="py-3 px-4 text-sm font-medium">BUC3110</td><td class="py-3 px-4 text-sm">Mobile Application Development</td><td class="py-3 px-4 text-sm text-slate-500">Daniel Okello</td><td class="py-3 px-4 text-sm">40</td><td class="py-3 px-4 text-center"><a href="{{ url('/courses/1/edit') }}" class="text-[#2563eb]"><i data-lucide="edit" class="w-4 h-4 inline"></i></a></td></tr>
+                        <tr class="hover:bg-slate-50"><td class="py-3 px-4 text-sm font-medium">BUC3105</td><td class="py-3 px-4 text-sm">Database Management Systems</td><td class="py-3 px-4 text-sm text-slate-500">Peter Mugisha</td><td class="py-3 px-4 text-sm">45</td><td class="py-3 px-4 text-center"><a href="{{ url('/courses/1/edit') }}" class="text-[#2563eb]"><i data-lucide="edit" class="w-4 h-4 inline"></i></a></td></tr>
                     </tbody>
                 </table>
             </div>
-            <!-- End: Departments table -->
+            <!-- End: Courses table -->  
 
         </main>
         <!-- Start: Footer -->
         <footer class="bg-[#1e3a8a] mt-auto">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
                 <div class="flex flex-col md:flex-row justify-between items-center gap-3">
-                    <p class="text-sm text-blue-100">© 2026 <span class="font-semibold text-white">Campus Service Portal</span>. All rights reserved.</p>
+                    <p class="text-sm text-blue-100">© 2026 <span class="font-semibold text-white">Student Management System</span>. All rights reserved.</p>
                     <p class="text-sm text-blue-200">Estates · ICT · Halls · Hostels · Registry</p>
                 </div>
             </div>
