@@ -2,62 +2,35 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
-use App\Models\Lecturer;
 use App\Models\User;
+use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        
-      // Admin Account
-        User::create([
-            'name' => 'System Admin',
-            'email' => 'admin@phu.ac.ug',
-            'password' => Hash::make('password123'),
-            'role' => 'admin',
-        ]);
+        // firstOrCreate only creates the user if that email is not already in the table,
+        // so running the seeder again does not make duplicates
 
-        // Student Account
-        User::create([
-            'name' => 'Priscillar Nakabugo',
-            'email' => 'priscillar@phu.ac.ug',
-            'password' => Hash::make('password456'),
-             'role' => 'student',
-        ]);
+        // Admin account
+        $admin = User::firstOrCreate(
+            ['email' => 'admin@mubs.ac.ug'],
+            ['name' => 'System Admin', 'password' => Hash::make('password')]
+        );
+        $admin->assignRole('admin');
 
-        User::create([
-            'name' => 'Mwesigwa Daniel Plan',
-            'email' => 'daniel@phu.ac.ug',
-            'password' => Hash::make('password789'),
-            'role' => 'student',
-            
-        ]);
+        // Lecturer accounts
+        $lecturer1 = User::firstOrCreate(
+            ['email' => 'bmutebi@mubs.ac.ug'],
+            ['name' => 'Mr. Mutebi Bashir', 'password' => Hash::make('password')]
+        );
+        $lecturer1->assignRole('lecturer');
 
-
-        //lecturerAccount
-    
-        User::create([
-            'name' => 'Mr. Mutebi Bashir',
-            'email' => 'bmutebi@phu.ac.ug',
-            'password' => Hash::make('password1011'),
-            'role' => 'lecturer',
-            
-        ]);
-
-        User::create([
-            'name' => 'Dr. Jane Doe',
-            'email' => 'jdoe@phu.ac.ug',
-            'password' => Hash::make('password1213'),
-            'role' => 'lecturer',
-        
-        ]);
-      
+        $lecturer2 = User::firstOrCreate(
+            ['email' => 'jdoe@mubs.ac.ug'],
+            ['name' => 'Dr. Jane Doe', 'password' => Hash::make('password')]
+        );
+        $lecturer2->assignRole('lecturer');
     }
 }
