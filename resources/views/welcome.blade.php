@@ -13,8 +13,7 @@
                 Administrators manage student and course records. Lecturers see their courses and the students registered for them. Students see the courses on offer and the ones they have registered for.
             </p>
             <div class="flex flex-col sm:flex-row gap-3 justify-center">
-                <a href="{{ url('/login') }}" class="px-6 py-3 bg-[#7b1e2b] text-white rounded-lg font-medium text-sm hover:bg-[#5f1621]">Sign in</a>
-                <a href="{{ url('/register') }}" class="px-6 py-3 border border-slate-200 text-slate-900 rounded-lg font-medium text-sm hover:border-[#7b1e2b]/40">Create account</a>
+                <a href="{{ route('login') }}" class="px-6 py-3 bg-[#7b1e2b] text-white rounded-lg font-medium text-sm hover:bg-[#5f1621]">Sign in</a>
             </div>
         </div>
     </section>
