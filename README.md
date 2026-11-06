@@ -94,5 +94,5 @@ Roles and permissions are created by `RolePermissionSeeder` using the Spatie Lar
 | Member | Tasks | Branch |
 | --- | --- | --- |
 | Arinda Sasha | Application functionality (Q4), Blade layouts and views (Q5), documentation (Q6) | feature/blade-layouts, feature/student-management, feature/documentation |
-| Buyinza Moureen and Ashaba Karren Alicia | Database design and relationships (Q1), authentication, roles and permissions (Q3) | feature/authenication-roles |
+| Buyinza Moureen and Ashaba Karren Alicia | Database design and relationships (Q1), authentication, roles and permissions (Q3) | feature/authentication-roles |
 | Nakalema Christine | Seeders and sample data (Q2) | feature/seeders |
