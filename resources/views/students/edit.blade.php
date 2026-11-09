@@ -8,34 +8,34 @@
     <h1 class="text-xl font-semibold mb-6">Edit student</h1>
 
     <!-- Start: Student form -->
-    <form method="POST" action="{{ url('/students/1') }}" class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm max-w-2xl">
+    <form method="POST" action="{{ route('students.update', $student->id) }}" class="bg-[#1A1A1A] border border-[#333333] rounded-xl overflow-hidden shadow-sm max-w-2xl">
         @csrf
         @method('PUT')
         <div class="p-6 space-y-5">
             <div>
-                <label class="block text-sm font-medium text-slate-600 mb-2">Full name</label>
-                <input class="input-field" name="name" value="{{ old('name', 'Aisha Namuli') }}" placeholder="e.g. Aisha Namuli">
-                @error('name') <p class="text-sm text-red-600 mt-1">{{ $message }}</p> @enderror
+                <label class="block text-sm font-medium text-[#D6C7B4] mb-2">Full name</label>
+                <input class="input-field" name="name" value="{{ $student->name }}" placeholder="e.g. Aisha Namuli">
+                @error('name') <p class="text-sm text-[#F28B8F] mt-1">{{ $message }}</p> @enderror
             </div>
             <div>
-                <label class="block text-sm font-medium text-slate-600 mb-2">Registration number</label>
-                <input class="input-field" name="reg_no" value="{{ old('reg_no', '24/U/01001/PS') }}" placeholder="e.g. 24/U/01001/PS">
-                @error('reg_no') <p class="text-sm text-red-600 mt-1">{{ $message }}</p> @enderror
+                <label class="block text-sm font-medium text-[#D6C7B4] mb-2">Registration number</label>
+                <input class="input-field" name="reg_no" value="{{ $student->reg_no }}" placeholder="e.g. 24/U/01001/PS">
+                @error('reg_no') <p class="text-sm text-[#F28B8F] mt-1">{{ $message }}</p> @enderror
             </div>
             <div>
-                <label class="block text-sm font-medium text-slate-600 mb-2">Email</label>
-                <input type="email" class="input-field" name="email" value="{{ old('email', 'aisha.namuli@mubs.ac.ug') }}" placeholder="e.g. aisha.namuli@mubs.ac.ug">
-                @error('email') <p class="text-sm text-red-600 mt-1">{{ $message }}</p> @enderror
+                <label class="block text-sm font-medium text-[#D6C7B4] mb-2">Email</label>
+                <input type="email" class="input-field" name="email" value="{{ $student->email }}" placeholder="e.g. aisha.namuli@mubs.ac.ug">
+                @error('email') <p class="text-sm text-[#F28B8F] mt-1">{{ $message }}</p> @enderror
             </div>
             <div>
-                <label class="block text-sm font-medium text-slate-600 mb-2">Program</label>
-                <input class="input-field" name="program" value="{{ old('program', 'Business Computing') }}" placeholder="e.g. Business Computing">
-                @error('program') <p class="text-sm text-red-600 mt-1">{{ $message }}</p> @enderror
+                <label class="block text-sm font-medium text-[#D6C7B4] mb-2">Program</label>
+                <input class="input-field" name="program" value="{{ $student->program }}" placeholder="e.g. Bachelor of Business Computing">
+                @error('program') <p class="text-sm text-[#F28B8F] mt-1">{{ $message }}</p> @enderror
             </div>
         </div>
-        <div class="px-4 py-4 border-t border-slate-200 flex justify-between">
-            <a href="{{ url('/students') }}" class="px-4 py-2 border border-slate-200 rounded-lg text-sm text-slate-600 hover:bg-slate-100">Cancel</a>
-            <button type="submit" class="px-4 py-2 bg-[#7b1e2b] rounded-lg text-sm font-medium text-white hover:bg-[#5f1621]">Update student</button>
+        <div class="px-4 py-4 border-t border-[#333333] flex justify-between">
+            <a href="{{ route('students.index') }}" class="px-4 py-2 border border-[#333333] rounded-lg text-sm text-[#D6C7B4] hover:bg-[#262626]">Cancel</a>
+            <button type="submit" class="px-4 py-2 bg-[#ECC412] rounded-lg text-sm font-medium text-[#0F0F0F] hover:bg-[#F5D54A]">Update student</button>
         </div>
     </form>
     <!-- End: Student form -->
