@@ -1,4 +1,4 @@
-/* Campus Service Portal — light theme, education blue + gold */
+/* Student Management System — dark theme: carnival red, circus yellow, deep blue, garden green, soft beige */
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -12,19 +12,19 @@ body {
     font-family: Inter, system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #ffffff;
-    color: #0f172a;
+    background: #0F0F0F;
+    color: #E5D5C1;
 }
 
 .text-gradient {
-    background: linear-gradient(135deg, #2563eb 0%, #d97706 100%);
+    background: linear-gradient(135deg, #ECC412 0%, #B0232B 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .text-gradient-gold {
-    background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+    background: linear-gradient(135deg, #B0232B 0%, #f59e0b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -32,19 +32,19 @@ body {
 
 .bg-mesh {
     background-image:
-        radial-gradient(at 40% 20%, rgba(37, 99, 235, 0.12) 0px, transparent 50%),
-        radial-gradient(at 80% 0%, rgba(217, 119, 6, 0.08) 0px, transparent 50%),
-        radial-gradient(at 0% 50%, rgba(37, 99, 235, 0.08) 0px, transparent 50%);
+        radial-gradient(at 40% 20%, rgba(236, 196, 18, 0.12) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, rgba(176, 35, 43, 0.08) 0px, transparent 50%),
+        radial-gradient(at 0% 50%, rgba(236, 196, 18, 0.08) 0px, transparent 50%);
 }
 
 .glow-blue {
-    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.18);
+    box-shadow: 0 8px 24px rgba(236, 196, 18, 0.18);
 }
 
 .sidebar-scrollbar::-webkit-scrollbar { width: 6px; }
-.sidebar-scrollbar::-webkit-scrollbar-track { background: #f8fafc; }
-.sidebar-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
-.sidebar-scrollbar::-webkit-scrollbar-thumb:hover { background: #2563eb; }
+.sidebar-scrollbar::-webkit-scrollbar-track { background: #0F0F0F; }
+.sidebar-scrollbar::-webkit-scrollbar-thumb { background: #333333; border-radius: 3px; }
+.sidebar-scrollbar::-webkit-scrollbar-thumb:hover { background: #ECC412; }
 
 .border-l-3 { border-left-width: 3px; }
 
@@ -66,23 +66,23 @@ details.menu-dropdown > summary::-webkit-details-marker { display: none; }
 .input-field {
     width: 100%;
     border-radius: 0.75rem;
-    background: #ffffff;
-    border: 1px solid #cbd5e1;
-    color: #0f172a;
+    background: #0F0F0F;
+    border: 1px solid #404040;
+    color: #E5D5C1;
     padding: 0.75rem 1rem;
     font-size: 0.875rem;
     transition: border-color 0.15s, box-shadow 0.15s;
 }
 .input-field:focus {
     outline: none;
-    border-color: #2563eb;
-    box-shadow: 0 0 0 1px #2563eb;
+    border-color: #ECC412;
+    box-shadow: 0 0 0 1px #ECC412;
 }
-.input-field::placeholder { color: #94a3b8; }
+.input-field::placeholder { color: #9C8F7F; }
 
 select.input-field {
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2364748b' viewBox='0 0 16 16'%3E%3Cpath d='M4.6 6.2L8 9.6l3.4-3.4'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23B9AC9B' viewBox='0 0 16 16'%3E%3Cpath d='M4.6 6.2L8 9.6l3.4-3.4'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 0.75rem center;
     padding-right: 2.25rem;
@@ -93,7 +93,7 @@ select.input-field {
     padding: 0.5rem 1rem;
     border: 0;
     border-radius: 0.5rem;
-    background: #eff6ff;
-    color: #1d4ed8;
+    background: #262626;
+    color: #ECC412;
     cursor: pointer;
 }

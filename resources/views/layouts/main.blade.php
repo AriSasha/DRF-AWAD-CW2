@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex flex-col">
+<body class="bg-[#0F0F0F] text-[#E5D5C1] font-sans antialiased min-h-screen flex flex-col">
 
     @include('layouts.header')
 
@@ -23,12 +23,12 @@
     <main class="flex-1 pt-20">
         @if (session('success'))
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-                <div class="p-4 rounded-lg bg-emerald-50 border border-emerald-200 text-sm text-emerald-800">{{ session('success') }}</div>
+                <div class="p-4 rounded-lg bg-[#1C7F46] border border-[#1C7F46] text-sm text-white">{{ session('success') }}</div>
             </div>
         @endif
         @if (session('error'))
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-                <div class="p-4 rounded-lg bg-red-50 border border-red-200 text-sm text-red-800">{{ session('error') }}</div>
+                <div class="p-4 rounded-lg bg-[#B0232B] border border-[#B0232B] text-sm text-white">{{ session('error') }}</div>
             </div>
         @endif
 
