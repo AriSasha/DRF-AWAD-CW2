@@ -32,5 +32,11 @@ class UserSeeder extends Seeder
             ['name' => 'Dr. Jane Doe', 'password' => Hash::make('password')]
         );
         $lecturer2->assignRole('lecturer');
+
+        $lecturer3 = User::firstOrCreate(
+            ['email' => 'jokello@mubs.ac.ug'],
+            ['name' => 'Dr. John Okello', 'password' => Hash::make('password')]
+        );
+        $lecturer3->assignRole('lecturer');
     }
 }
